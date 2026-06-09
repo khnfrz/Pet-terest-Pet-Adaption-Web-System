@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+header,
+.container {
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+/* ===== ADD PET FORM ===== */
+form {
+  justify-self: center;
+  justify-content: center;
+  max-width: 300px;
+  max-height: 570px;
+  padding: 4rem;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-family: "Poppins", sans-serif;
+}
+
+form h2 {
+  text-align: center;
+  color: #1ba750;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+form label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+  color: #333;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="file"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+form input[type="text"]:focus,
+form input[type="number"]:focus,
+form input[type="file"]:focus {
+  border-color: #1ba750;
+  box-shadow: 0 0 5px rgba(27, 167, 80, 0.4);
+}
+
+form p {
+  margin: 0.5rem 0 0.3rem 0;
+  font-weight: 500;
+  color: #333;
+}
+
+/* Radio buttons styled as buttons */
+.speciesOption {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.species-btn {
+  flex: 1;
+  text-align: center;
+  padding: 10px 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: 0.3s ease;
+}
+
+.species-btn:hover {
+  background-color: #e0ffe5;
+  border-color: #1ba750;
+}
+
+input[type="radio"]:checked + .species-btn {
+  background-color: #e0ffe5;
+  color: black;
+  border-color: #1ba750;
+}
+
+/* Submit Button */
+.submit-btn {
+  margin-top: 1rem;
+  padding: 12px;
+  background-color: #1ba750;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #158a43;
+  transform: scale(1.02);
+}
+
+.page-btn {
+  align-self: center;
+  margin-top: 1rem;
+  background: transparent;
+  width: 50%;
+  padding: 12px;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  form {
+    padding: 1.5rem;
+    margin: 1rem;
+  }
+  .speciesOption {
+    flex-direction: column;
+  }
+}

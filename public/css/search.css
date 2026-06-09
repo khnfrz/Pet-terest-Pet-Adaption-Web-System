@@ -1,0 +1,117 @@
+
+
+/* ===== HEADER ===== */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+/* NAME + LOGO */
+.name {
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+.header img {
+  height: 55px;
+}
+.title {
+  color: rgb(27, 167, 80);
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+/* ===== SEARCH BOX (scoped to header only) ===== */
+.header .search {
+  position: relative;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  border-radius: 20px;
+  background-color: rgba(128, 128, 128, 0.08);
+}
+
+.header .search button {
+  height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}
+
+.header .search img {
+  height: 25px;
+  margin-right: 10px;
+}
+
+.header .search input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  height: 2rem;
+  width: 300px; /* adjust width as needed */
+  font-size: 1rem;
+  padding: 0 0.5rem;
+}
+
+.header .search input::placeholder {
+  color: gray;
+}
+
+#searchDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  display: none;
+}
+
+/* ===== NAV LINKS ===== */
+.nav-links {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.nav-links a {
+  margin-left: 40px;
+  font-size: 1em;
+  color: black;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.isHome {
+  font-weight: 900;
+}
+
+.addPet {
+  width: 80px;
+  padding: 10px;
+  background-color: rgb(57, 206, 114);
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  transition: 0.4s ease;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.addPet:hover {
+  background-color: rgb(27, 167, 80);
+  scale: 1.1;
+  transition: 0.3s;
+}
